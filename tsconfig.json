@@ -8,7 +8,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "removeComments": true, 
+    "removeComments": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -20,9 +20,9 @@
     "paths": {
       "*": ["types/*"]
     },
-    "typeRoots": ["node_modules/@types", "src/@types"],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
   "files": ["src/graphql.d.ts"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "codegen.ts"],
   "exclude": ["codegen.ts", "dist"]
 }

@@ -1,12 +1,23 @@
 type Query {
   featuredListings: [Listing!]!
+  "Returns the details about this listing"
+  listing(id: ID!): Listing
 }
 
 "A particular intergalactic location available for booking"
 type Listing {
   id: ID!
   title: String!
+  description: String!
   numOfBeds: Int
   costPerNight: Float
   closedForBookings: Boolean
+  "The amenities available for this listing"
+  amenities: [Amenity!]!
+}
+
+type Amenity {
+  id: ID!
+  category: String!
+  name: String!
 }

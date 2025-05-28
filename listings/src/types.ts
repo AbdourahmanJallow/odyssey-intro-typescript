@@ -27,7 +27,7 @@ export type Amenity = {
 };
 
 export type CreateListingInput = {
-  /** The Listing's amenities */
+  /** The listing's amenities */
   amenities: Array<Scalars['ID']['input']>;
   /** Indicates whether listing is closed for bookings (on hiatus) */
   closedForBookings?: InputMaybe<Scalars['Boolean']['input']>;
@@ -62,6 +62,7 @@ export type Listing = {
   closedForBookings?: Maybe<Scalars['Boolean']['output']>;
   /** The cost per night */
   costPerNight?: Maybe<Scalars['Float']['output']>;
+  /** The listing's description */
   description: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   /** The number of beds available */

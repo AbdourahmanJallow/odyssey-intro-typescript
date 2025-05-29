@@ -1,12 +1,12 @@
-import type { CodegenConfig } from "@graphql-codegen/cli";
+import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
-  schema: "./src/schema.graphql",
+  schema: './src/schema.graphql',
   generates: {
-    "./src/types.ts": {
-      plugins: ["typescript", "typescript-resolvers"],
+    './src/types.ts': {
+      plugins: ['typescript', 'typescript-resolvers'],
       config: {
-        contextType: "./context#DataSourceContext",
+        contextType: './context#DataSourceContext',
       },
     },
   },

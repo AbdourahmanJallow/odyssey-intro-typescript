@@ -19,37 +19,27 @@ export type Scalars = {
 
 export type Amenity = {
   __typename?: 'Amenity';
-  /** The amenity category the amenity belongs to */
   category: Scalars['String']['output'];
   id: Scalars['ID']['output'];
-  /** The amenity's name */
   name: Scalars['String']['output'];
 };
 
 export type CreateListingInput = {
-  /** The listing's amenities */
+  /** The amenities available for this listing */
   amenities: Array<Scalars['ID']['input']>;
-  /** Indicates whether listing is closed for bookings (on hiatus) */
   closedForBookings?: InputMaybe<Scalars['Boolean']['input']>;
-  /** The cost per night */
-  costPerNight: Scalars['Float']['input'];
-  /** The listing's description */
+  costPerNight?: InputMaybe<Scalars['Float']['input']>;
   description: Scalars['String']['input'];
-  /** The number of beds available */
-  numOfBeds: Scalars['Int']['input'];
-  /** The listing's title */
+  numOfBeds?: InputMaybe<Scalars['Int']['input']>;
   title: Scalars['String']['input'];
 };
 
 export type CreateListingResponse = {
   __typename?: 'CreateListingResponse';
-  /** Similar to HTTP status code, represents the status of the mutation */
   code: Scalars['Int']['output'];
   /** The newly created listing */
   listing?: Maybe<Listing>;
-  /** Human-readable message for the UI */
   message: Scalars['String']['output'];
-  /** Indicates whether the mutation was successful */
   success: Scalars['Boolean']['output'];
 };
 
@@ -58,16 +48,11 @@ export type Listing = {
   __typename?: 'Listing';
   /** The amenities available for this listing */
   amenities: Array<Amenity>;
-  /** Indicates whether listing is closed for bookings (on hiatus) */
   closedForBookings?: Maybe<Scalars['Boolean']['output']>;
-  /** The cost per night */
   costPerNight?: Maybe<Scalars['Float']['output']>;
-  /** The listing's description */
   description: Scalars['String']['output'];
   id: Scalars['ID']['output'];
-  /** The number of beds available */
   numOfBeds?: Maybe<Scalars['Int']['output']>;
-  /** The listing's title */
   title: Scalars['String']['output'];
 };
 
@@ -84,7 +69,6 @@ export type MutationCreateListingArgs = {
 
 export type Query = {
   __typename?: 'Query';
-  /** A curated array of listings to feature on the homepage */
   featuredListings: Array<Listing>;
   /** Returns the details about this listing */
   listing?: Maybe<Listing>;

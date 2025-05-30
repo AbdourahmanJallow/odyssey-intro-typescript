@@ -24,6 +24,7 @@ type Listing {
   amenities: [Amenity!]!
 }
 
+"Represents a feature or facility available at a listing, such as Wi-Fi, swimming pool, etc."
 type Amenity {
   id: ID!
   category: String!

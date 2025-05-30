@@ -17,6 +17,7 @@ export type Scalars = {
   Float: { input: number; output: number; }
 };
 
+/** Represents a feature or facility available at a listing, such as Wi-Fi, swimming pool, etc. */
 export type Amenity = {
   __typename?: 'Amenity';
   category: Scalars['String']['output'];

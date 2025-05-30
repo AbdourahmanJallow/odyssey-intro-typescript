@@ -34,3 +34,5 @@ node_modules/
 # Always regenerate new types before running project
 listings/src/types.ts
 reviews/src/types.ts
+
+.notes

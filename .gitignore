@@ -35,4 +35,4 @@ node_modules/
 listings/src/types.ts
 reviews/src/types.ts
 
-.notes
+*.txt

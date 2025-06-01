@@ -13,7 +13,7 @@ type Mutation {
 }
 
 "A particular intergalactic location available for booking"
-type Listing {
+type Listing @key(fields: "id") {
   id: ID!
   title: String!
   description: String!

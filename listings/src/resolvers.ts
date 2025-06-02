@@ -14,7 +14,8 @@ export const resolvers: Resolvers = {
     createListing: async (_, { input }, { dataSources }) => {
       try {
         const response = await dataSources.listingAPI.createListing(input);
-        console.log(response);
+        // console.log(response);
+
         return {
           code: 200,
           success: true,
@@ -34,6 +35,7 @@ export const resolvers: Resolvers = {
   Listing: {
     amenities: ({ id, amenities }, _, { dataSources }) => {
       // console.log(parent);
+
       return validateFullAmenities(amenities)
         ? amenities
         : dataSources.listingAPI.getAmenities(id);
